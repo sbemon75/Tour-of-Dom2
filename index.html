@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+</head>
+<style>
+    .capital-container li{
+        color: aqua;
+
+    }
+
+</style>
+<body>
+    <header>
+            <h1>Welcom to my dom </h1>
+    </header>
+
+    <main id="main-container">
+        <section id="fruit-container">
+           <h1>Fruits i like</h1>
+           <ul>
+            <li >lichi</li>
+            <li >Apple</li>
+            <li >Mango</li>
+           </ul>
+        </section>
+
+        <section>
+            <h1> Sports you like</h1>
+            <ul id="sportslist">
+                <li>Football</li>
+                <li>Cricket</li>
+                <li>Badminton</li>
+            </ul>
+        </section>
+
+        <section id="capital-container">
+            <h1 id="area">Favourite place</h1>
+            <ul>
+                <li>Dhaka</li>
+                <li>Khulna</li>
+                <li>Cumilla</li>
+            </ul>
+        </section>
+
+    </main>
+    <script src="./dom.js"></script>
+    <script src="./stylejs.js"></script>
+    <script src="./append.js"></script>
+    <script>
+       const liCollection = document.getElementById('li');
+
+       for (const li of liCollection)
+       {
+        console.log(li.innerText);
+       }
+    </script>
+    <script>
+        console.log("adding html inside js");
+
+
+
+        //quareselector all
+
+      const someLi = document.querySelectorAll('.capital-container li');
+     // console.log(someLi);
+     for(const li of someLi){
+        console.log(li);
+     }
+
+
+
+    </script>
+    
+</body>
+</html>
