@@ -18,7 +18,54 @@
     <button id="event-liste">Handel Addevent Listener</button>
 
 
+    <p id="para">Your text hare</p>
+    <input id="input" type="text">
+    <button id="btn-submit">Submit</button>
+
+
+    <h1>Please add your comment</h1>
+    <div id="comment">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero repellendus mollitia distinctio, quia nobis officia ullam, commodi officiis aspernatur in possimus. Repudiandae eum modi ut in iure temporibus ipsum tenetur officiis ratione pariatur ducimus veritatis officia, deleniti animi! Iste sapiente sequi doloremque quia eligendi optio eaque vel et voluptatum, commodi possimus incidunt sit architecto corrupti ipsam qui labore nam obcaecati id quisquam. Libero quibusdam repellendus numquam expedita consequatur natus magnam. </p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti non dolores quidem debitis tempore nulla nesciunt sunt, cumque dolor exercitationem corporis quod eius, voluptas ab fugiat? Est nam ipsa, consequuntur sunt, nemo laudantium facilis iure labore nihil esse corrupti animi reiciendis veniam iste repudiandae ex consectetur dolorum ut quasi molestiae earum rerum officiis? Maxime quasi aut iste quam? Impedit quasi ipsum dolore itaque numquam esse placeat cupiditate quae maiores neque!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus reprehenderit, doloremque harum magnam, quas fuga cum dolor voluptatum dicta corrupti, at provident facere error atque ullam doloribus officia odio voluptatem! Odio voluptas hic provident deserunt omnis dolores possimus fugiat, molestias, et soluta minus recusandae? Eligendi temporibus mollitia ad eum sapiente omnis beatae magni tenetur consequuntur facilis cumque illo, enim aliquam repellendus ipsa iure tempore eaque vero amet eveniet cupiditate vel.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci modi vel voluptates, quas iusto ex corporis necessitatibus quisquam cumque quod, neque, earum sapiente? Veniam distinctio quod ratione aspernatur dicta, excepturi laboriosam repellendus natus libero hic suscipit eaque commodi asperiores vitae vel omnis quisquam! Voluptatem deleniti provident cupiditate possimus dolorum aliquid ratione in obcaecati velit dicta voluptatum quaerat libero rerum similique, nobis, voluptas ut eaque esse sed expedita adipisci facilis, id blanditiis ad? Libero tempore harum facere tempora qui. Error quaerat sed quasi inventore vitae libero quam commodi deserunt modi reprehenderit. Odio nesciunt quaerat impedit vero id? Laudantium similique dicta illum.</p>
+    </div>
+
+    <div>
+        <textarea name="" id="write" cols="50" rows="10"></textarea>
+        <br><br>
+        <button id="post">Post</button>
+    </div>
+
     <script>
+
+         //add event listener to the post box
+        document.getElementById('post'),addEventListener('click', function(){
+            //get the comment
+            const inputWrite = document.getElementById('write');
+            const inputComment = inputWrite.value;
+
+            const comment = document.getElementById('comment');
+            const p = document.createElement('p');
+            p.innerText = inputComment;
+
+            comment.appendChild(p);
+        });
+
+
+
+
+
+
+        document.getElementById('btn-submit').addEventListener('click', function(){
+            const inputFil = document.getElementById('input');
+            const inputTex = inputFil.value;
+
+            const p = document.getElementById('para');
+            p.innerText = inputTex;
+        })
+
+
         
         //option:1
 
