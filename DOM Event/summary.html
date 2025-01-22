@@ -37,6 +37,38 @@
         <button id="post">Post</button>
     </div>
 
+
+            
+    <h1 id="secret">My secreat info</h1>
+    <input id="delete" type="text" placeholder="Please type for delete">
+    <button id="btn" disabled>Delete</button>
+
+
+
+    <script>
+        document.getElementById('delete'),addEventListener('keyup',function(event){
+            const text = event.target.value;
+            
+            const deleteButton = document.getElementById('delete');
+            if(text == 'delete'){
+                deleteButton.removeAttribute('disabled');
+            }
+            else{
+                deleteButton.setAttribute('disabled', true);
+            }
+        })
+        document.getElementById('btn'),addEventListener('click', function(){
+            const secrettext = document.getElementById('secret');
+            secrettext.style.display = 'none';
+        })
+
+
+
+
+    </script>
+
+
+
     <script>
 
          //add event listener to the post box
@@ -50,6 +82,8 @@
             p.innerText = inputComment;
 
             comment.appendChild(p);
+
+            inputWrite.value= ' ' ;
         });
 
 
