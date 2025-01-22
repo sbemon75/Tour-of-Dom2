@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Final Dom Event Handelars</h1>
+    <h3 id="handeler-status">Defult Text</h3>
+    <p id="input-text">input text</p>
+    <input id="input-field" type="text">
+    <button id="btn-update">update</button>
+    <br>
+    <br>
+    <button onclick="handelOneClick()">Handel event by function</button>
+    <button id="event-liste">Handel Addevent Listener</button>
+
+
+    <script>
+        
+        //option:1
+
+        function handelOneClick () {
+            const handelerStatus = document.getElementById('handeler-status');
+            handelerStatus.innerText = 'Handel by function';
+        }
+
+        //option:2
+
+        document.getElementById('event-liste').addEventListener('click', function () {
+            const handelerStatus = document.getElementById('handeler-status');
+            handelerStatus.innerText = 'Handel by event listener';
+        })
+
+        //option: 2 recap
+
+        document.getElementById('btn-update').addEventListener('click',function () {
+            const inputField = document.getElementById('input-field');
+            const inputText = inputField.value;
+
+
+            const p = document.getElementById('input-text');
+            p.innerText = inputText;
+        })
+    </script>
+</body>
+</html>
